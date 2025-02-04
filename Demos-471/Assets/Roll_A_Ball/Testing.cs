@@ -25,11 +25,11 @@ public class Testing : MonoBehaviour
 
         switch (t.position.y){
 
-        case 10: 
+        case 60: 
             speed = -1;
             break;
 
-        case -10: 
+        case -60: 
             speed = 1;
             break;
 
