@@ -23,6 +23,8 @@ public class FP_Controller : MonoBehaviour
     [SerializeField]
     public GameObject boolet;
 
+    bool hasJumped = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,6 +58,13 @@ public class FP_Controller : MonoBehaviour
         //turn movement into a vec3
         Vector3 movementReal = (transform.forward * moveZ) + (transform.right * moveX);
 
+        if (hasJumped){
+            hasJumped = false;
+            movementReal.y = 10;
+        }
+
+        movementReal.y -= 10 * Time.deltaTime;
+
         //use vec 3 to move
         controller.Move(movementReal * Time.deltaTime * speed);
 
@@ -75,5 +84,10 @@ public class FP_Controller : MonoBehaviour
     void OnAttack()
     {
         Instantiate(boolet, booletSpawn.transform.position, booletSpawn.transform.rotation);
+    }
+
+    void OnJump()
+    {
+        hasJumped = true;
     }
 }
