@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Roll_A_Ball/Roll_A_Ball.unity
     guid: a0578e4aa131e7a4b84fed0a0630ca81
-  - enabled: 1
+  - enabled: 0
     path: Assets/First-Person/First-Person.unity
     guid: aed8622a0aaba024c844d015e7b5c594
+  - enabled: 1
+    path: Assets/SmpleStateMachine/SmpleStateMachine.unity
+    guid: b63f5d144e13e2849ac054cd53323339
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
