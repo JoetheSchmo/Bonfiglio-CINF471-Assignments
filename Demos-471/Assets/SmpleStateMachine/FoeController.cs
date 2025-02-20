@@ -121,9 +121,9 @@ public class FoeController : MonoBehaviour
         Debug.DrawRay(transform.position, transform.forward * 10, Color.red);
 
         if(Physics.Raycast(transform.position, transform.forward, out hit, 10)){
-            FP_Controller player = hit.transform.gameObject.GetComponent<FP_Controller>();
+            PlayerStateManager player = hit.transform.gameObject.GetComponent<PlayerStateManager>();
 
-            if (player != null){
+            if (player != null && player.currentState != player.sneak){
                 print(hit.transform.gameObject.name);
                 lastKnownPos = hit.transform.position;
                 return hit.transform.gameObject;
