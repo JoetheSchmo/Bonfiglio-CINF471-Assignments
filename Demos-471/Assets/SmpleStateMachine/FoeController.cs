@@ -20,9 +20,11 @@ public class FoeController : MonoBehaviour
     int health = 4;
     Vector3 lastKnownPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private Animator anim;
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -44,6 +46,9 @@ public class FoeController : MonoBehaviour
 
     void OnPace()
     {
+
+        anim.SetBool("Following", false);
+
         print("vibing and thriving");
 
         //What do we do when we're pacing?
@@ -73,6 +78,9 @@ public class FoeController : MonoBehaviour
 
     void OnFollow()
     {
+
+        anim.SetBool("Following", true);
+
         print(">:)");
 
         //what do we do?
@@ -125,7 +133,7 @@ public class FoeController : MonoBehaviour
 
             if (player != null && player.currentState != player.sneak){
                 print(hit.transform.gameObject.name);
-                lastKnownPos = hit.transform.position;
+                lastKnownPos = hit.transform.position; 
                 return hit.transform.gameObject;
             }
         }

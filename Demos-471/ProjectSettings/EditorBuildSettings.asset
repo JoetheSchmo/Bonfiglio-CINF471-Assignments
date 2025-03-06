@@ -17,9 +17,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SmpleStateMachine/SmpleStateMachine.unity
     guid: b63f5d144e13e2849ac054cd53323339
-  - enabled: 1
+  - enabled: 0
     path: Assets/ComplexStateMachine/ComplexStateMachine.unity
     guid: b8ccdda8fa649524d888a4dc90f4d686
+  - enabled: 1
+    path: Assets/Polish/Polish.unity
+    guid: 0d39e4e2a1a38a3419892bdf2cda9ce2
+  - enabled: 1
+    path: Assets/Polish/PolishWin.unity
+    guid: 98d05e2e6e497e140ab3cb116d14659a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
