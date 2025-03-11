@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1933825673208977050}
   - component: {fileID: 1824103258504127513}
   - component: {fileID: 7825847961158121038}
+  - component: {fileID: 4674344656965399377}
   m_Layer: 0
   m_Name: Tresure
   m_TagString: Untagged
@@ -109,6 +110,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4674344656965399377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4702111748234026554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd52e8b836f3f5644b8523c92cb1dd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
 --- !u!1 &8243670807216992533
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +164,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8243670807216992533}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 5.6
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -158,7 +172,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -773,7 +787,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 17
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -2794,7 +2808,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
@@ -3728,7 +3742,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
     type: 0
     collisionMode: 0
@@ -4951,7 +4965,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8700830748110596878}
-  - component: {fileID: 3196447217287934483}
   m_Layer: 0
   m_Name: Tresure
   m_TagString: Untagged
@@ -4975,16 +4988,3 @@ Transform:
   - {fileID: 6588474402450539319}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3196447217287934483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8947337614206518924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd52e8b836f3f5644b8523c92cb1dd8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 0}

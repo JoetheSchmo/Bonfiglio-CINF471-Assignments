@@ -19,6 +19,7 @@ public class FoeController : MonoBehaviour
     float speed = 2;
     int health = 4;
     Vector3 lastKnownPos;
+    public GameObject model;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private Animator anim;
@@ -121,6 +122,7 @@ public class FoeController : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, moveTarget, (moveSpeed * Time.deltaTime));
         transform.LookAt(moveTarget, Vector3.up);
+        model.transform.LookAt(moveTarget, Vector3.up);
     }
 
     GameObject CheckForward()
@@ -129,9 +131,9 @@ public class FoeController : MonoBehaviour
         Debug.DrawRay(transform.position, transform.forward * 10, Color.red);
 
         if(Physics.Raycast(transform.position, transform.forward, out hit, 10)){
-            PlayerStateManager player = hit.transform.gameObject.GetComponent<PlayerStateManager>();
+            FP_Controller player = hit.transform.gameObject.GetComponent<FP_Controller>();
 
-            if (player != null && player.currentState != player.sneak){
+            if (player != null){
                 print(hit.transform.gameObject.name);
                 lastKnownPos = hit.transform.position; 
                 return hit.transform.gameObject;
@@ -139,5 +141,12 @@ public class FoeController : MonoBehaviour
         }
 
         return null;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Boolet>() != null){
+            Destroy(gameObject);
+        }
     }
 }

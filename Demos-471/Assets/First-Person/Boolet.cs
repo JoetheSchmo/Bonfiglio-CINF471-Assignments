@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class B : MonoBehaviour
+public class Boolet : MonoBehaviour
 {
 
     Rigidbody rb;

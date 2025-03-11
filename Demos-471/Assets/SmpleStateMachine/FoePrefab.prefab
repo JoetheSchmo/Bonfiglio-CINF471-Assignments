@@ -120,7 +120,8 @@ GameObject:
   - component: {fileID: 3265884943157660827}
   - component: {fileID: 1597264984020989696}
   - component: {fileID: 495210721128469156}
-  - component: {fileID: 1838056771716699785}
+  - component: {fileID: 3909667102745931419}
+  - component: {fileID: 5740545748305254051}
   m_Layer: 0
   m_Name: BillieEilish
   m_TagString: Untagged
@@ -204,7 +205,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -212,7 +213,29 @@ CapsuleCollider:
   m_Height: 8.309773
   m_Direction: 1
   m_Center: {x: 0, y: 3.1548836, z: 0}
---- !u!114 &1838056771716699785
+--- !u!95 &3909667102745931419
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384792766054978531}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 83c5fd5e77c075649ba2530b9a221f56, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5740545748305254051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,6 +250,7 @@ MonoBehaviour:
   route:
   - {fileID: 1391458140412122848}
   - {fileID: 2765210508624105060}
+  model: {fileID: 9095716202775785156}
 --- !u!1 &1391458140412122848
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +322,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6264212641554810964}
-  - component: {fileID: 3323205217780227274}
   m_Layer: 0
   m_Name: FoePrefab
   m_TagString: Untagged
@@ -324,28 +347,6 @@ Transform:
   - {fileID: 496402050236038593}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3323205217780227274
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5427163864168222762}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 83c5fd5e77c075649ba2530b9a221f56, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8285233944387523477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -421,5 +422,10 @@ PrefabInstance:
 --- !u!4 &8462731118545171582 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 315a088c1ec83944483038a35004750f, type: 3}
+  m_PrefabInstance: {fileID: 8285233944387523477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9095716202775785156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 315a088c1ec83944483038a35004750f, type: 3}
   m_PrefabInstance: {fileID: 8285233944387523477}
   m_PrefabAsset: {fileID: 0}
